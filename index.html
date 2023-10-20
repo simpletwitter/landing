@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Add Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <!-- Add AOS CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.rawgit.com/michalsnik/aos/2.3.4/dist/aos.css"
+    />
+    <!-- Add Font Awesome CSS from a CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+
+    <style>
+      /* Custom CSS styles */
+      /* Add your custom styles here */
+    </style>
+    <title>Simple Twitter</title>
+  </head>
+  <body class="bg-light text-dark">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">Simple Twitter</a>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#installation">Installation</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#usage">Usage</a></li>
+          <li class="nav-item"><a class="nav-link" href="#users">Users</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="#packages">Packages</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#updates">Updates</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#code-usage">Code Usage</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#features">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#issues">Issues</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Installation and Usage -->
+    <div class="container mt-4">
+      <div class="column gap-4">
+        <div id="installation" class="col-md-6" data-aos="fade-right">
+          <h2 class="font-weight-bold">Installation</h2>
+          <p>
+            This package can be used to create your own Twitter bot with minimal
+            code.
+          </p>
+          <div class="mt-2 mb-4 d-flex flex-column align-items-start gap-2">
+            <div>
+              <code
+                id="codeinstall"
+                class="bg-white text-success p-2 rounded shadow-sm mr-2"
+                >pip install simpletwitter</code
+              >
+              <button class="btn" data-clipboard-target="#codeinstall">
+                <i class="far fa-copy"></i>
+              </button>
+            </div>
+          </div>
+          <p>
+            PyPi Link:
+            <a href="https://pypi.org/project/simpletwitter/" target="_blank"
+              >https://pypi.org/project/simpletwitter/</a
+            >
+          </p>
+          <p>
+            Google Groups Link:
+            <a href="https://groups.google.com/g/simpletwitter" target="_blank"
+              >https://groups.google.com/g/simpletwitter</a
+            >
+          </p>
+          <p>
+            Discussions Link:
+            <a
+              href="https://github.com/orgs/simpletwitter/discussions"
+              target="_blank"
+              >https://github.com/orgs/simpletwitter/discussions</a
+            >
+          </p>
+        </div>
+
+        <div id="usage" class="col-md-6 mt-4" data-aos="fade-left">
+          <h2 class="font-weight-bold">Usage</h2>
+          <pre
+            class="p-2 rounded shadow-sm bg-white"
+          ><code id="codeusage" class="text-dark ">from simpletwitter import SimpleTwitter
+bot = SimpleTwitter(email, password, no_of_tweets, username)
+bot.login()
+bot.like_tweet(hashtags)
+bot.unlike_liked_tweets(5)
+bot.tweet(tweetmessage)</code></pre>
+          <button class="btn" data-clipboard-target="#codeusage">
+            <i class="far fa-copy"></i> Copy
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Users and Version -->
+    <div id="users" class="container mt-4">
+      <h2 class="font-weight-bold">
+        Users Currently Using as of October 2023:
+      </h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Total Downloads</th>
+            <th>Monthly Downloads</th>
+            <th>Weekly Downloads</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>16,989</td>
+            <td>720</td>
+            <td>96</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Users Graph -->
+    <div class="container mt-4">
+      <h2 class="font-weight-bold">Users Graph</h2>
+      <img
+        src="https://github.com/pravee42/simpletwitter/assets/65100038/08ac5b6c-5137-482e-8824-ff712a177379"
+        alt="Users Graph"
+        class="img-fluid"
+      />
+    </div>
+
+    <!-- Packages Used -->
+    <div id="packages" class="container mt-4">
+      <h2 class="font-weight-bold">Packages Used</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Tool Name</th>
+            <th>Purpose</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Selenium</td>
+            <td>Chrome Automation</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Feature Updates -->
+    <div id="updates" class="container mt-4">
+      <h2 class="font-weight-bold">Feature Updates</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Update</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Update 1</td>
+            <td>Added function to retweet</td>
+          </tr>
+          <tr>
+            <td>Update 2</td>
+            <td>
+              Added feature to like the top tweets of the particular hashtags
+            </td>
+          </tr>
+          <tr>
+            <td>Update 3</td>
+            <td>Added Tech News feature to post news on a Twitter account</td>
+          </tr>
+          <tr>
+            <td>Update 4</td>
+            <td>
+              Can post LinkedIn content into a tweet using AI summarizer tool
+              from Hugging Face.io
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Code Usage of Updates -->
+    <div id="code-usage" class="container mt-4">
+      <h2 class="font-weight-bold">Code Usage of Updates</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Date of Update</th>
+            <th>Feature Update</th>
+            <th>Usage Code</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Update 1 -->
+          <tr>
+            <td>2023-10-03</td>
+            <td>Added function to retweet</td>
+            <td>
+              <button
+                class="btn btn-link"
+                data-toggle="collapse"
+                data-target="#code1"
+              >
+                Show Code
+              </button>
+              <div id="code1" class="collapse">
+                <pre
+                  class="p-2 rounded shadow-sm bg-white"
+                ><code class="text-dark">from simpletwitter import SimpleTwitter
+bot = SimpleTwitter(email, password, no_of_tweets, username)
+bot.login()
+hashtags = ["#reactjs", "abipravi"]
+bot.only_like_top_tweet(hashtags)</code></pre>
+              </div>
+            </td>
+          </tr>
+          <!-- Update 2 -->
+          <tr>
+            <td>2023-10-03</td>
+            <td>
+              Added feature to like the top tweets of the particular hashtags
+            </td>
+            <td>
+              <button
+                class="btn btn-link"
+                data-toggle="collapse"
+                data-target="#code2"
+              >
+                Show Code
+              </button>
+              <div id="code2" class="collapse">
+                <pre
+                  class="p-2 rounded shadow-sm bg-white"
+                ><code class="text-dark">from simpletwitter import SimpleTwitter
+bot = SimpleTwitter(email, password, no_of_tweets, username)
+bot.login()
+hashtags = ["#reactjs", "abipravi"]
+bot.retweet(hashtags)</code></pre>
+              </div>
+            </td>
+          </tr>
+          <!-- Update 3 -->
+          <tr>
+            <td>2023-10-03</td>
+            <td>Added Tech News feature to post news on a Twitter account</td>
+            <td>
+              <button
+                class="btn btn-link"
+                data-toggle="collapse"
+                data-target="#code3"
+              >
+                Show Code
+              </button>
+              <div id="code3" class="collapse">
+                <pre
+                  class="p-2 rounded shadow-sm bg-white"
+                ><code class="text-dark">from simpletwitter import SimpleTwitter
+bot = SimpleTwitter(email, password, no_of_tweets, username)
+bot.login()
+no_of_news_to_be_posted = 1
+x = bot.post_tech_news(no_of_news_to_be_posted)</code></pre>
+              </div>
+            </td>
+          </tr>
+          <!-- Update 4 -->
+          <tr>
+            <td>2023-10-03</td>
+            <td>
+              Can post LinkedIn content into a tweet using AI summarizer tool
+              from Hugging Face.io
+            </td>
+            <td>
+              <button
+                class="btn btn-link"
+                data-toggle="collapse"
+                data-target="#code4"
+              >
+                Show Code
+              </button>
+              <div id="code4" class="collapse">
+                <pre
+                  class="p-2 rounded shadow-sm bg-white"
+                ><code class="text-dark">from simpletwitter import SimpleTwitter
+bot = SimpleTwitter(email, password, no_of_tweets, username)
+bot.login()
+bot.postLinkedIn(Url)</code></pre>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Features -->
+    <div id="features" class="container mt-4">
+      <h2 class="font-weight-bold">Features</h2>
+      <ul class="list-group">
+        <li class="list-group-item">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" disabled />
+            <label class="form-check-label"> Scrape Data for analytics </label>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" checked disabled />
+            <label class="form-check-label"> Tech News post on Twitter </label>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" disabled />
+            <label class="form-check-label">
+              Twitter API also using Twitter API keys
+            </label>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" disabled />
+            <label class="form-check-label">
+              Create a web Admin Dashboard for Twitter Automation
+            </label>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" checked disabled />
+            <label class="form-check-label"> LinkedIn to Twitter Post </label>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Issues from GitHub -->
+    <div id="issues" class="container mt-4">
+      <h2 class="font-weight-bold">Issues from GitHub</h2>
+      <div id="github-issues" class="table-responsive">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Creator</th>
+              <th>Created Date</th>
+              <th>Labels</th>
+              <th>Creator Profile</th>
+              <th>Assignees</th>
+              <th>Comments</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- JavaScript for AOS -->
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <!-- Include Clipboard.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+
+    <!-- Add Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Fetch and display GitHub issues -->
+    <script>
+      fetch("https://api.github.com/repos/simpletwitter/simpletwitter/issues")
+        .then((response) => response.json())
+        .then((issues) => {
+          const issuesTable = document.querySelector("#github-issues tbody");
+          issues.forEach((issue) => {
+            const row = issuesTable.insertRow();
+            const titleCell = row.insertCell(0);
+            const creatorCell = row.insertCell(1);
+            const createdDateCell = row.insertCell(2);
+            const labelsCell = row.insertCell(3);
+            const creatorProfileCell = row.insertCell(4);
+            const assigneesCell = row.insertCell(5);
+            const commentsCell = row.insertCell(6);
+            const statusCell = row.insertCell(7);
+
+            // Make the issue title clickable
+            const titleLink = document.createElement("a");
+            titleLink.href = issue.html_url;
+            titleLink.textContent = issue.title;
+            titleLink.target = "_blank";
+            titleCell.appendChild(titleLink);
+
+            creatorCell.textContent = issue.user.login;
+            createdDateCell.textContent = new Date(
+              issue.created_at
+            ).toLocaleDateString();
+
+            // Create a div for labels
+            const labelsDiv = document.createElement("div");
+
+            issue.labels.forEach((label) => {
+              const badge = document.createElement("span");
+              badge.textContent = label.name;
+              badge.classList.add("badge", "badge-pill", "text-white");
+              badge.style.backgroundColor = "#" + label.color;
+              labelsDiv.appendChild(badge);
+            });
+
+            labelsCell.appendChild(labelsDiv);
+
+            const profileLink = document.createElement("a");
+            profileLink.href = issue.user.html_url;
+            profileLink.textContent = issue.user.login;
+            profileLink.target = "_blank";
+            creatorProfileCell.appendChild(profileLink);
+
+            if (issue.assignees.length > 0) {
+              issue.assignees.forEach((assignee) => {
+                const assigneeLink = document.createElement("a");
+                assigneeLink.href = assignee.html_url;
+                assigneeLink.textContent = assignee.login;
+                assigneeLink.target = "_blank";
+                assigneesCell.appendChild(assigneeLink);
+                assigneesCell.appendChild(document.createElement("br"));
+              });
+            } else {
+              assigneesCell.textContent = "None";
+            }
+
+            commentsCell.textContent = issue.comments;
+
+            if (issue.state === "open") {
+              statusCell.textContent = "Active";
+            } else {
+              statusCell.textContent = "Closed";
+              const closedDate = new Date(issue.closed_at);
+              statusCell.title = `Closed on ${closedDate.toLocaleString()}`;
+            }
+          });
+        });
+    </script>
+    <script>
+      var clipboard = new ClipboardJS(".btn-copy");
+
+      clipboard.on("success", function (e) {
+        e.clearSelection();
+        e.trigger.textContent = "Copied";
+        setTimeout(function () {
+          e.trigger.textContent = "Copy";
+        }, 2000);
+      });
+
+      clipboard.on("error", function (e) {
+        e.trigger.textContent = "Press Ctrl+C to copy";
+        setTimeout(function () {
+          e.trigger.textContent = "Copy";
+        }, 2000);
+      });
+    </script>
+  </body>
+</html>
