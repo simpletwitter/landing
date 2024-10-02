@@ -119,9 +119,9 @@ bot.tweet(tweetmessage)</code></pre>
         </thead>
         <tbody>
           <tr>
-            <td>22,185</td>
-            <td>635</td>
-            <td>143</td>
+            <td id="tod">22,185</td>
+            <td id="tmd">635</td>
+            <td id="twd">143</td>
           </tr>
         </tbody>
       </table>
@@ -469,6 +469,24 @@ bot.postLinkedIn(Url)</code></pre>
           e.trigger.textContent = "Copy";
         }, 2000);
       });
+    </script>
+
+    <script>
+        fetch("https://api.pepy.tech/api/v2/projects/simpletwitter", {
+          method: 'GET',
+          headers: {
+            "Content-Type": "application/json", 
+            "X-Api-Key": "LsxklZ3HlaiJUIsW9AmVa+osnH/XcbsL" 
+          }
+        })
+        .then((response) => response.json())
+        .then((issues) => {
+          const tod = document.querySelector("#tod");
+          const tmd = document.querySelector("#tmd");
+          const twd = document.querySelector("#twd");
+          tod.innerHtml = response.total_downloads;
+          });
+        });
     </script>
   </body>
 </html>
